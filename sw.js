@@ -26,26 +26,26 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-4562b90ac66942c4ae19.js"
+    "url": "webpack-runtime-d0dcac6031fc8de599ba.js"
   },
   {
-    "url": "app.5ec0041650f095f656d6.css"
+    "url": "app.01019d5f978708c6d588.css"
   },
   {
-    "url": "app-cff634bbab279b18675b.js"
+    "url": "app-9117838769b2767393b2.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-3c68924c38ad813971b9.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "eb851bbe6bb81fbb47b6b65056e353bb"
+    "revision": "c40dffde0d2e3f2c0b15d95abc97b7be"
   },
   {
-    "url": "component---src-pages-404-js-7d1e1617e1d70516afe6.js"
+    "url": "component---src-pages-404-js-77c2bcf834959828efb9.js"
   },
   {
-    "url": "0-cad272748484c85cc985.js"
+    "url": "0-4178c77876607804d8cb.js"
   },
   {
     "url": "static/d/651/path---404-html-516-62a-SVfVyaepxsTE9nUw8nMyJz7me0k.json"
@@ -76,7 +76,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/https://rafaeldavish.github.io/Ceremi-rebuild/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/https://rafaeldavish.github.io/Ceremi-rebuild/blog/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -145,7 +145,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `/https://rafaeldavish.github.io/Ceremi-rebuild${pathname}`
+        return `/https://rafaeldavish.github.io/Ceremi-rebuild/blog${pathname}`
       } else {
         return pathname
       }
